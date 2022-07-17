@@ -3,6 +3,8 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
+const pgp = require("pg-promise")(/* options */);
+const db = pgp("postgres://ashish:password@localhost:5432/ciao");
 
 //Router Imports
 const userRouter = require("./routes/user");
@@ -24,6 +26,15 @@ app.use("/category", categoryRouter);
 app.use("/product", productRouter);
 
 // //Database Connection
+//Postgress
+db.one("SELECT $1 AS value", 123)
+  .then((data) => {
+    console.log("DATA:", data.value);
+  })
+  .catch((error) => {
+    console.log("ERROR:", error);
+  });
+
 // mongoose.connect(process.env.DB_CONNECTION,
 //     { useNewUrlParser: true, useUnifiedTopology: true },
 //     () => {
