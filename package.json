@@ -1,0 +1,12 @@
+{
+  "name": "ciao",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ashish Bansal <ashish.bansal@xooa.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}
