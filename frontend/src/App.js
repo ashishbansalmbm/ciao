@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 
 function App() {
+  const [message, setMessage] = useState(null);
+
   useEffect(() => {
-    fetch("/user")
+    fetch("user/")
       .then((resp) => resp.json())
-      .then((message) => console.log(message));
+      .then((msg) => setMessage(msg.message));
   }, []);
 
-  return <p>Hello team </p>;
+  return <p>Hello team {message}</p>;
 }
 
 export default App;

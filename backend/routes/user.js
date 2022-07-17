@@ -10,6 +10,7 @@ const Store = require("../models/store");
 // });
 router.get("/", async (req, res) => {
   console.log("user route");
+  res.send({ message: "hi there suuny" });
 });
 
 router.post("/", async (req, res) => {
