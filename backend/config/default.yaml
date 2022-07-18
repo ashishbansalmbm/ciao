@@ -1,0 +1,7 @@
+SERVER:
+  PORT: 3200
+
+LOG_LEVEL:
+  ERROR_LOG: "logging/logs/errorLog.txt"
+  COMBINED_LOG: "logging/logs/combinedLog.txt"
+  EXCEPTION_LOG: "logging/logs/exceptionLog.txt"
